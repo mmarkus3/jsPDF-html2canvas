@@ -4,11 +4,16 @@
   "description": "A combine usage with jsPDF and html2canvas, which translating html content to PDF file.",
   "main": "dist/jspdf-html2canvas.min.js",
   "module": "dist/jspdf-html2canvas.min.js",
+  "files": [
+    "dist/jspdf-html2canvas.min.js",
+    "dist/types.d.ts"
+  ],
   "scripts": {
     "prebuild": "rm -rf ./dist",
     "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "ci": "yarn install --immutable --immutable-cache --check-cache"
+    "ci": "yarn install --immutable --immutable-cache --check-cache",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
